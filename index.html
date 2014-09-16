@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Kopiamon!</title>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="assets/js/pokes.js"></script>
+	<script src="assets/js/settings.js"></script>
+	<script src="assets/js/controls.js"></script>
+	<script src="assets/js/init.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<p class="help">Presiona las flechas de dirección del teclado para seleccionar el ataque. Y luego presiona enter para atacar.</p>
+		<div id="enemy" class="bar">
+			<p>Name</p>
+			<div class="hp">
+				<div class="value good"></div>
+			</div>
+		</div>
+		<canvas id="main"></canvas>
+		<div id="you" class="bar">
+			<div class="hp">
+				<div class="value good"></div>
+			</div>
+			<p>Name</p>
+		</div>
+		<div id="panel">
+			<ul class="attacks"></ul>
+			<p class="textAttack"></p>
+			<p class="winner"></p>
+		</div>
+	</div>
+</body>
+</html>

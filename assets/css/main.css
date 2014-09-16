@@ -1,0 +1,86 @@
+body {
+	font-family: Arial, sans-serif
+}
+.wrapper {
+	width: 240px;
+	margin: 0 auto
+}
+canvas {
+	display: block;
+	margin: 0
+}
+p {
+	margin: 5px 0;
+}
+.help {
+	color: #999;
+	font-size: 11px;
+	margin-bottom: 15px
+}
+.hp {
+	background: #4d4d4d;
+	height: 20px;
+	width: 240px;
+	padding: 2px;
+	box-sizing: border-box;
+}
+.hp .value {
+	height: 100%;
+}
+.good { background: green }
+.warning { background: yellow }
+.danger { background: red }
+.attacks {
+	width: 240px;
+	padding: 0;
+	margin: 0 auto;
+	list-style: none;
+}
+.attacks li {
+	position: relative;
+	display: inline-block;
+	width: 49%;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	box-sizing: border-box;
+	color: #999;
+	font-size: 13px
+}
+.attacks li.active {
+	color: #333;
+}
+.attacks li.active:before {
+	content: '>';
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #333;
+	font-weight: bold;
+	-webkit-animation: fx 600ms infinite;
+  	-moz-animation:    fx 600ms infinite;
+ 	-o-animation:      fx 600ms infinite;
+  	animation:         fx 600ms infinite;
+}
+.attackFX {
+	-webkit-animation: fx 400ms 1;
+  	-moz-animation:    fx 400ms 1;
+ 	-o-animation:      fx 400ms 1;
+  	animation:         fx 400ms 1;
+}
+
+@-webkit-keyframes fx {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fx {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fx {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fx {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
