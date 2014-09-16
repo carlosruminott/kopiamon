@@ -244,6 +244,9 @@ function loadIMGCanvas(obj) {
     	obj.imgOK = true;
     	draw(obj);
     }
+    obj.img.onerror = function() {
+    	console.log('error: ' + obj.pokeName);
+    }
 }
 
 function draw(obj,key) {
