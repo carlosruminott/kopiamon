@@ -167,6 +167,25 @@ function checkEnd(you, opponent) {
 	return false;
 }
 
+function resset() {
+	var enemyValue = document.querySelector('#enemy .value'),
+		youValue = document.querySelector('#you .value'),
+		alertWinner = document.querySelector('#panel .winner');
+
+	document.removeEventListener("click", resset);
+
+	yourPoke = new Pokemon(stPokeYour);
+	enemyPoke = new Pokemon(stPokeEnemy);
+	youMaxLife = yourPoke.pokeLife;
+	enemyMaxLife = enemyPoke.pokeLife;
+	chosenAttack = 0;
+	colorBarLife(enemyValue, 100);
+	colorBarLife(youValue, 100);
+	alertWinner.innerHTML = '';
+
+	ready();
+}
+
 
 //-------------------------------------------
 // GRAPHICS
@@ -176,7 +195,7 @@ function checkEnd(you, opponent) {
 function colorBarLife(bar, life) {
 	var colorClass;
 
-	if (life > 70 && life < 100) {
+	if (life > 70 && life <= 100) {
 		colorClass = 'good';
 	}else if (life > 40 && life < 70) {
 		colorClass = 'warning';
@@ -227,11 +246,12 @@ function displayWinner(winner) {
 		alertWinner = document.querySelector('#panel .winner');
 
 	document.removeEventListener("keydown", kDown);
+	document.addEventListener("click", resset);
 	clearTimeout(window);
 
 	displayAttacks.innerHTML = '';
 	alertTextAttack.innerHTML = '';
-	alertWinner.innerHTML = '<h2>' + winner + '</h2>';
+	alertWinner.innerHTML = '<h2>' + winner + '</h2><button id="resset">Volver a jugar</button>';
 }
 
 

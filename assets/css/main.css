@@ -36,6 +36,13 @@ p {
 	margin: 0 auto;
 	list-style: none;
 }
+#panel {
+	border: 2px solid #999;
+	padding: 10px 5px 5px
+}
+.winner {
+	text-align: center
+}
 .attacks li {
 	position: relative;
 	display: inline-block;
