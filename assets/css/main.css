@@ -2,22 +2,17 @@ body {
 	font-family: Arial, sans-serif
 }
 .wrapper {
-	width: 240px;
+	width: 260px;
 	margin: 0 auto
 }
-.credits {
-	margin: 10px 0;
-	padding: 0;
-	list-style: none;
-	text-align: center;
+.game {
+	padding: 10px;
+	background: #f0f0f0
 }
-.credits li {
-	display: inline-block;
-	padding: 0 5px
-}
-.credits a {
-	color: #999;
-	font-size: 11px
+.screen {
+	margin-bottom: 10px;
+	padding: 5px 0;
+	background: #ddd;
 }
 canvas {
 	display: block;
@@ -33,6 +28,22 @@ p {
 	border-bottom: 1px solid #ccc;
 	color: #999;
 	font-size: 11px;
+}
+.bar p {
+	padding: 0 35px;
+	color: #4d4d4d;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.bar p:last-child {
+	margin-bottom: 0
+}
+#enemy p {
+	text-align: right;
+}
+#you p {
+	text-align: left;
 }
 .hp {
 	background: #4d4d4d;
@@ -54,11 +65,16 @@ p {
 	list-style: none;
 }
 #panel {
+	height: 115px;
+	background: #fff;
 	border: 2px solid #999;
 	padding: 10px 5px 5px
 }
 .winner {
-	text-align: center
+	text-align: center;
+}
+.winner h2 {
+	margin: 10px 0
 }
 .attacks li {
 	position: relative;
@@ -107,4 +123,19 @@ p {
 @keyframes fx {
   0%   { opacity: 0; }
   100% { opacity: 1; }
+}
+
+.credits {
+	margin: 10px 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+.credits li {
+	display: inline-block;
+	padding: 0 5px
+}
+.credits a {
+	color: #999;
+	font-size: 11px
 }
